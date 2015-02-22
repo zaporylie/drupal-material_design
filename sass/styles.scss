@@ -8,7 +8,9 @@
 
 /* Import Sass mixins, variables, Compass modules, etc. */
 //@import "init";
+@import "settings";
 @import "colors";
+@import "form";
 
 /* HTML element (SMACSS base) rules */
 //@import "normalize";

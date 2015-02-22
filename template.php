@@ -130,3 +130,14 @@ function material_design_preprocess_block(&$variables, $hook) {
   //}
 }
 // */
+
+function material_design_preprocess_form_element(&$variables) {
+  $available = array(
+    'checkbox',
+    'radio',
+    'textfield'
+  );
+  if (in_array($variables['element']['#type'], $available)) {
+    $variables['element']['#title_display'] = 'after';
+  }
+}

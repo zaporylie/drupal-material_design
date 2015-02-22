@@ -6,46 +6,133 @@
  * of these @include files will be combined into a single file.
  */
 /* Import Sass mixins, variables, Compass modules, etc. */
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400&subset=latin,latin-ext);
+/* line 1, ../sass/_form.scss */
+.input-field, input[type=text] {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: #eee;
+}
+/* line 9, ../sass/_form.scss */
+.input-field:focus, input[type=text]:focus {
+  outline: 0;
+  border-color: #3f51b5;
+}
+/* line 13, ../sass/_form.scss */
+.input-field + label, input[type=text] + label {
+  color: #eee;
+}
+
+/* line 23, ../sass/_form.scss */
+.input-list, .form-type-radio,
+.form-type-checkbox {
+  padding: 4rem 4rem 4rem 18rem;
+  position: relative;
+}
+/* line 26, ../sass/_form.scss */
+.input-list label, .form-type-radio label,
+.form-type-checkbox label {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+}
+/* line 30, ../sass/_form.scss */
+.input-list input, .form-type-radio input,
+.form-type-checkbox input {
+  position: absolute;
+  left: -9999px;
+}
+/* line 34, ../sass/_form.scss */
+.input-list input + label:before, .form-type-radio input + label:before,
+.form-type-checkbox input + label:before {
+  position: absolute;
+  content: '';
+  top: 4rem;
+  left: 4rem;
+  height: 4rem;
+  width: 4rem;
+}
+/* line 42, ../sass/_form.scss */
+.input-list [type=checkbox]:not(:checked) + label:before, .form-type-radio [type=checkbox]:not(:checked) + label:before,
+.form-type-checkbox [type=checkbox]:not(:checked) + label:before {
+  background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_outline_blank_24px.svg");
+}
+/* line 45, ../sass/_form.scss */
+.input-list [type=checkbox]:checked + label:before, .form-type-radio [type=checkbox]:checked + label:before,
+.form-type-checkbox [type=checkbox]:checked + label:before {
+  background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_24px.svg");
+}
+/* line 48, ../sass/_form.scss */
+.input-list [type=radio]:not(:checked) + label:before, .form-type-radio [type=radio]:not(:checked) + label:before,
+.form-type-checkbox [type=radio]:not(:checked) + label:before {
+  background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_off_24px.svg");
+}
+/* line 51, ../sass/_form.scss */
+.input-list [type=radio]:checked + label:before, .form-type-radio [type=radio]:checked + label:before,
+.form-type-checkbox [type=radio]:checked + label:before {
+  background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_on_24px.svg");
+}
+
 /* HTML element (SMACSS base) rules */
 /* Layout rules */
 /* Component (SMACSS module) rules */
-@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400&subset=latin,latin-ext);
 /* SMACSS theme rules */
 /**
  * @file
  */
+/* line 8, ../sass/_theme.scss */
+html {
+  font-size: 4px;
+}
+
 /* line 11, ../sass/_theme.scss */
 body {
   font-size: 14px;
   font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
 }
 
-/* line 15, ../sass/_theme.scss */
+/* line 16, ../sass/_theme.scss */
 h1 {
   font-size: 34px;
+  font-weight: 300;
 }
 
-/* line 18, ../sass/_theme.scss */
+/* line 20, ../sass/_theme.scss */
 h2 {
   font-size: 20px;
-}
-
-/* line 21, ../sass/_theme.scss */
-h3 {
-  font-size: 16px;
+  font-weight: 400;
 }
 
 /* line 24, ../sass/_theme.scss */
+h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* line 28, ../sass/_theme.scss */
 h4 {
   font-size: 14px;
+  font-weight: 400;
 }
 
-/* line 27, ../sass/_theme.scss */
+/* line 32, ../sass/_theme.scss */
 h5 {
   font-size: 12px;
+  font-weight: 400;
 }
 
-/* line 41, ../sass/_theme.scss */
+/* line 36, ../sass/_theme.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 49, ../sass/_theme.scss */
 #header {
-  background-color: #e91e63;
+  background-color: #3f51b5;
+  color: rgba(255, 255, 255, 0.87);
 }

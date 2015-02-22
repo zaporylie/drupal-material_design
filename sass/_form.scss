@@ -1,0 +1,59 @@
+.input-field {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: $form-border-default-color;
+  &:focus {
+    outline: 0;
+    border-color: material-get-color($base-color);
+  }
+  & + label {
+    color: $form-border-default-color;
+  }
+}
+
+.form-type-radio,
+.form-type-checkbox {
+  @extend .input-list;
+}
+
+.input-list {
+  padding: 4rem 4rem 4rem 18rem;
+  position: relative;
+  label {
+    color: $material-color-dark;
+    font-size: $base-unit * 4;
+  }
+  input {
+    position: absolute;
+    left: -9999px;
+  }
+  input + label:before {
+    position: absolute;
+    content: '';
+    top: 4rem;
+    left: 4rem;
+    height: 4rem;
+    width: 4rem;
+  }
+  [type=checkbox]:not(:checked) + label:before {
+    background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_outline_blank_24px.svg");
+  }
+  [type=checkbox]:checked + label:before {
+    background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_24px.svg");
+  }
+  [type=radio]:not(:checked) + label:before {
+    background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_off_24px.svg");
+  }
+  [type=radio]:checked + label:before {
+    background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_on_24px.svg");
+  }
+}
+
+
+input[type=text] {
+  @extend .input-field;
+}
