@@ -1,0 +1,43 @@
+/**
+ * @file
+ */
+
+
+$base-unit: 4px;
+$base-color: 'pink';
+$accent-color: 'indigo';
+
+// init
+body {
+  font-size: $base-unit * 3.5;
+  font-family: "Roboto", Arial, sans-serif;
+}
+h1 {
+  font-size: $base-unit * 8.5;
+}
+h2 {
+  font-size: $base-unit * 5;
+}
+h3 {
+  font-size: $base-unit * 4;
+}
+h4 {
+  font-size: $base-unit * 3.5;
+}
+h5 {
+  font-size: $base-unit * 3;
+}
+
+.region {
+
+}
+
+.sidebar {
+
+}
+
+
+
+#header {
+  background-color: material-get-color($base-color);
+}
