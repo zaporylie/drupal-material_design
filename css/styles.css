@@ -23,57 +23,107 @@
   border-color: #3f51b5;
 }
 /* line 13, ../sass/_form.scss */
-.input-field + label, input[type=text] + label {
+.input-field ~ label, input[type=text] ~ label {
   color: #eee;
 }
 
-/* line 23, ../sass/_form.scss */
+/* line 18, ../sass/_form.scss */
 .input-list, .form-type-radio,
 .form-type-checkbox {
   padding: 4rem 4rem 4rem 18rem;
   position: relative;
 }
-/* line 26, ../sass/_form.scss */
+/* line 21, ../sass/_form.scss */
 .input-list label, .form-type-radio label,
 .form-type-checkbox label {
   color: rgba(0, 0, 0, 0.87);
   font-size: 16px;
 }
-/* line 30, ../sass/_form.scss */
+/* line 25, ../sass/_form.scss */
 .input-list input, .form-type-radio input,
 .form-type-checkbox input {
   position: absolute;
   left: -9999px;
 }
-/* line 34, ../sass/_form.scss */
-.input-list input + label:before, .form-type-radio input + label:before,
-.form-type-checkbox input + label:before {
+
+/* line 32, ../sass/_form.scss */
+.checkbox input + label:before, .form-type-checkbox input + label:before,
+.checkbox input + label:after,
+.form-type-checkbox input + label:after {
   position: absolute;
   content: '';
-  top: 4rem;
+  top: 3rem;
   left: 4rem;
-  height: 4rem;
+  height: 6rem;
+  width: 6rem;
+  border-width: 2px;
+  border-radius: 1rem;
+  border-style: solid;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+}
+/* line 46, ../sass/_form.scss */
+.checkbox input:checked + label, .form-type-checkbox input:checked + label {
+  color: #3f51b5;
+}
+/* line 49, ../sass/_form.scss */
+.checkbox input:checked + label:before, .form-type-checkbox input:checked + label:before {
+  border-color: #3f51b5;
+}
+/* line 52, ../sass/_form.scss */
+.checkbox input:checked + label:after, .form-type-checkbox input:checked + label:after {
+  position: absolute;
+  content: '';
+  top: 3rem;
+  left: 5rem;
+  height: 3rem;
+  width: 7rem;
+  transform: rotate(-45deg);
+  border-width: 0 0 1rem 1rem;
+  border-style: solid;
+  border-radius: 0 0 0 1rem;
+  border-color: #3f51b5;
+}
+
+/* line 67, ../sass/_form.scss */
+.radio input + label:before, .form-type-radio input + label:before,
+.radio input + label:after,
+.form-type-radio input + label:after {
+  position: absolute;
+  content: '';
+  top: 3rem;
+  left: 4rem;
+  height: 6rem;
+  width: 6rem;
+  border-width: 2px;
+  border-radius: 50%;
+  border-style: solid;
+  color: rgba(0, 0, 0, 0.87);
+  box-sizing: border-box;
+}
+/* line 81, ../sass/_form.scss */
+.radio input:checked + label, .form-type-radio input:checked + label {
+  color: #3f51b5;
+}
+/* line 84, ../sass/_form.scss */
+.radio input:checked + label:before, .form-type-radio input:checked + label:before {
+  border-color: #3f51b5;
+}
+/* line 87, ../sass/_form.scss */
+.radio input:checked + label:after, .form-type-radio input:checked + label:after {
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+  margin: 1rem;
+  border: 0;
+  background-color: #3f51b5;
   width: 4rem;
+  height: 4rem;
 }
-/* line 42, ../sass/_form.scss */
-.input-list [type=checkbox]:not(:checked) + label:before, .form-type-radio [type=checkbox]:not(:checked) + label:before,
-.form-type-checkbox [type=checkbox]:not(:checked) + label:before {
-  background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_outline_blank_24px.svg");
-}
-/* line 45, ../sass/_form.scss */
-.input-list [type=checkbox]:checked + label:before, .form-type-radio [type=checkbox]:checked + label:before,
-.form-type-checkbox [type=checkbox]:checked + label:before {
-  background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_24px.svg");
-}
-/* line 48, ../sass/_form.scss */
-.input-list [type=radio]:not(:checked) + label:before, .form-type-radio [type=radio]:not(:checked) + label:before,
-.form-type-checkbox [type=radio]:not(:checked) + label:before {
-  background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_off_24px.svg");
-}
-/* line 51, ../sass/_form.scss */
-.input-list [type=radio]:checked + label:before, .form-type-radio [type=radio]:checked + label:before,
-.form-type-checkbox [type=radio]:checked + label:before {
-  background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_on_24px.svg");
+
+/* line 115, ../sass/_form.scss */
+.grippie {
+  display: none;
 }
 
 /* HTML element (SMACSS base) rules */

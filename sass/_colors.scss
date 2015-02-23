@@ -12,19 +12,6 @@ $material-color-light: rgba(255,255,255,0.87);
   @return $map;
 }
 
-@function material-get-color($color, $variant: '500', $type: 'main-color') {
-  $c: map-get($material-colors, $color);
-  $v: map-get($c, $variant);
-  $t: map-get($v, $type);
-  @return $t;
-  //  @return map-get(map-get(map-get($material-colors, $color), $variant), $type);
-}
-
-@mixin material-background($color, $variant: '500') {
-  background-color: material-get-color($color, $variant, 'main-color');
-  color: material-get-color($color, $variant, 'extra-color');
-}
-
 $material-colors: (
         'red': (
                 '50': material-build-map(#ffebee, $material-color-dark),
@@ -338,3 +325,18 @@ $material-colors: (
                 '1000': material-build-map(#11171a, $material-color-light),
         )
 );
+
+
+
+@function material-get-color($color: $base-color, $variant: '500', $type: 'main-color') {
+        $c: map-get($material-colors, $color);
+        $v: map-get($c, $variant);
+        $t: map-get($v, $type);
+        @return $t;
+        //  @return map-get(map-get(map-get($material-colors, $color), $variant), $type);
+}
+
+@mixin material-background($color, $variant: '500') {
+        background-color: material-get-color($color, $variant, 'main-color');
+        color: material-get-color($color, $variant, 'extra-color');
+}

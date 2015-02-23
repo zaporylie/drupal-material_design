@@ -10,14 +10,9 @@
     outline: 0;
     border-color: material-get-color($base-color);
   }
-  & + label {
+  & ~ label {
     color: $form-border-default-color;
   }
-}
-
-.form-type-radio,
-.form-type-checkbox {
-  @extend .input-list;
 }
 
 .input-list {
@@ -31,29 +26,92 @@
     position: absolute;
     left: -9999px;
   }
-  input + label:before {
-    position: absolute;
-    content: '';
-    top: 4rem;
-    left: 4rem;
-    height: 4rem;
-    width: 4rem;
-  }
-  [type=checkbox]:not(:checked) + label:before {
-    background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_outline_blank_24px.svg");
-  }
-  [type=checkbox]:checked + label:before {
-    background-image: url("../images/material-design-icons/toggle/svg/production/ic_check_box_24px.svg");
-  }
-  [type=radio]:not(:checked) + label:before {
-    background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_off_24px.svg");
-  }
-  [type=radio]:checked + label:before {
-    background-image: url("../images/material-design-icons/toggle/svg/production/ic_radio_button_on_24px.svg");
-  }
 }
 
+.checkbox {
+  input + label:before,
+  input + label:after {
+    position: absolute;
+    content: '';
+    top: 3rem;
+    left: 4rem;
+    height: 6rem;
+    width: 6rem;
+    border-width: 2px;
+    border-radius: 1rem;
+    border-style: solid;
+    color: $material-color-dark;
+    box-sizing: border-box;
+  }
+  input:checked + label {
+    color: material-get-color($base-color);
+  }
+  input:checked + label:before {
+    border-color: material-get-color($base-color);
+  }
+  input:checked + label:after {
+    position: absolute;
+    content: '';
+    top: 3rem;
+    left: 5rem;
+    height: 3rem;
+    width: 7rem;
+    transform: rotate(-45deg);
+    border-width: 0 0 1rem 1rem;
+    border-style: solid;
+    border-radius: 0 0 0 1rem;
+    border-color: material-get-color($base-color);
+  }
+}
+.radio {
+  input + label:before,
+  input + label:after {
+    position: absolute;
+    content: '';
+    top: 3rem;
+    left: 4rem;
+    height: 6rem;
+    width: 6rem;
+    border-width: 2px;
+    border-radius: 50%;
+    border-style: solid;
+    color: $material-color-dark;
+    box-sizing: border-box;
+  }
+  input:checked + label {
+    color: material-get-color($base-color);
+  }
+  input:checked + label:before {
+    border-color: material-get-color($base-color);
+  }
+  input:checked + label:after {
+    position: absolute;
+    content: '';
+    box-sizing: border-box;
+    margin: 1rem;
+    border: 0;
+    background-color: material-get-color($base-color);
+    width: 4rem;
+    height: 4rem;
+  }
+
+}
 
 input[type=text] {
   @extend .input-field;
+}
+
+.form-type-radio,
+.form-type-checkbox {
+  @extend .input-list;
+}
+.form-type-radio {
+  @extend .radio;
+}
+.form-type-checkbox {
+  @extend .checkbox;
+}
+
+.grippie {
+  display: none;
 }
