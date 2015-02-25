@@ -131,3 +131,29 @@ function material_design_preprocess_block(&$variables, $hook) {
 }
 // */
 
+function material_design_preprocess_form_element(&$variables) {
+  $available = array(
+    'checkbox',
+    'radio',
+  );
+  if (in_array($variables['element']['#type'], $available)) {
+    $variables['element']['#title_display'] = 'after';
+  }
+  if ($variables['element']['#title_display'] == 'before') {
+    $variables['element']['#theme_wrappers'][] = 'form_element_label_before_wrapper';
+  }
+
+}
+
+function material_design_theme() {
+  return array(
+    'form_element_label_before_wrapper' => array(
+      'render element' => 'element',
+    ),
+  );
+}
+
+function material_design_form_element_label_before_wrapper($variables) {
+  $element = $variables['element'];
+  return $element['#children'];
+}

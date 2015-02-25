@@ -18,13 +18,12 @@
 .input-list {
   padding: 4rem 4rem 4rem 18rem;
   position: relative;
-  label {
-    color: $material-color-dark;
-    font-size: $base-unit * 4;
-  }
   input {
     position: absolute;
     left: -9999px;
+  }
+  label {
+    color: $material-color-dark;
   }
 }
 
@@ -37,7 +36,7 @@
     left: 4rem;
     height: 6rem;
     width: 6rem;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 1rem;
     border-style: solid;
     color: $material-color-dark;
@@ -72,7 +71,7 @@
     left: 4rem;
     height: 6rem;
     width: 6rem;
-    border-width: 2px;
+    border-width: 1px;
     border-radius: 50%;
     border-style: solid;
     color: $material-color-dark;
@@ -97,8 +96,62 @@
 
 }
 
-input[type=text] {
-  @extend .input-field;
+.textarea {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: $form-border-default-color;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 1rem;
+}
+
+.fieldset {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: $form-border-default-color;
+}
+
+.form-actions {
+  padding: 1.5rem;
+  text-align: right;
+}
+.button {
+  text-transform: uppercase;
+  padding: 1em;
+  margin: .5em;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: inherit;
+  &:hover {
+    @include material-background($accent-color, 'a100');
+  }
+  &:focus {
+    @include material-background($accent-color, 'a200');
+  }
+  &:active {
+    @include material-background($accent-color, 'a400');
+  }
+}
+.raised-button {
+
+}
+
+.form-item {
+//  padding-left: 40%;
+//  position: relative;
+//  & + label {
+//    width: 40%;
+//    position: absolute;
+//    right: 40%;
+//    text-align: right;
+//  }
+  .description {
+    font-size: .8em;
+    padding: 1em 0;
+    opacity: .8;
+  }
 }
 
 .form-type-radio,
@@ -111,6 +164,26 @@ input[type=text] {
 .form-type-checkbox {
   @extend .checkbox;
 }
+textarea {
+  @extend .textarea;
+}
+fieldset {
+  @extend .fieldset;
+}
+input[type=text] {
+  @extend .input-field;
+}
+button,
+input[type=submit] {
+  @extend .button;
+}
+.actions {
+  button,
+  input[type=submit] {
+    @extend .button;
+  }
+}
+
 
 .grippie {
   display: none;

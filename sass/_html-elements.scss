@@ -1,0 +1,86 @@
+html {
+  font-size: $base-unit;
+}
+body {
+  font-size: $base-unit * 4;
+  line-height: 1.5em;
+  font-family: "Roboto", Arial, sans-serif;
+  margin: 0;
+}
+h1 {
+  font-size: $base-unit * 8.5;
+  font-weight: 300;
+}
+h2 {
+  font-size: $base-unit * 5;
+  font-weight: 400;
+}
+h3 {
+  font-size: $base-unit * 4;
+  font-weight: 400;
+}
+h4 {
+  font-size: $base-unit * 3.5;
+  font-weight: 400;
+}
+h5 {
+  font-size: $base-unit * 3;
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  width: 100%;
+  tr {
+    th {
+      border-bottom: 1px solid $form-border-default-color;
+      font-weight: 500;
+    }
+    td {
+
+    }
+    &:hover {
+      th,
+      td {
+        border-bottom: 1px solid $form-border-default-color;
+      }
+    }
+  }
+  th,
+  td {
+    text-align: left;
+    font-weight: inherit;
+    padding: 1em .5em;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+div.vertical-tabs {
+  border: 0;
+  ul.vertical-tabs-list {
+    border: 0;
+    li {
+      a {
+        padding: 1em .5em;
+      }
+      background-color: transparent;
+      padding-right: 8rem;
+      border-width: 0 1px 1px 1px;
+      border-style: solid;
+      border-color: $form-border-default-color;
+      //@todo place icon here
+      &:first-child {
+        border-top-width: 1px;
+      }
+      &.selected:first-child {
+        border-top: 0;
+      }
+      &.selected:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

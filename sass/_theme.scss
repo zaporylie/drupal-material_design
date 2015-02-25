@@ -5,38 +5,6 @@
 
 
 // init
-html {
-  font-size: $base-unit;
-}
-body {
-  font-size: $base-unit * 3.5;
-  font-family: "Roboto", Arial, sans-serif;
-  margin: 0;
-}
-h1 {
-  font-size: $base-unit * 8.5;
-  font-weight: 300;
-}
-h2 {
-  font-size: $base-unit * 5;
-  font-weight: 400;
-}
-h3 {
-  font-size: $base-unit * 4;
-  font-weight: 400;
-}
-h4 {
-  font-size: $base-unit * 3.5;
-  font-weight: 400;
-}
-h5 {
-  font-size: $base-unit * 3;
-  font-weight: 400;
-}
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
 .region {
 
