@@ -16,4 +16,14 @@
 
 #header {
   @include material-background($base-color);
+  height: 16rem;
+  & > * {
+    display: inline-block;
+  }
+  #logo {
+    img {
+      height: 14rem;
+    }
+    padding: 1rem 4rem;
+  }
 }

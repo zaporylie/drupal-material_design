@@ -6,6 +6,7 @@
   border-width: 0 0 2px 0;
   border-style: solid;
   border-color: $form-border-default-color;
+  font-size: inherit;
   &:focus {
     outline: 0;
     border-color: material-get-color($base-color);
@@ -16,14 +17,25 @@
 }
 
 .input-list {
-  padding: 4rem 4rem 4rem 18rem;
+  padding: 0 0 0 18rem;
+  margin-bottom: 6rem;
   position: relative;
   input {
     position: absolute;
     left: -9999px;
+    cursor: pointer;
   }
   label {
     color: $material-color-dark;
+    cursor: pointer;
+    margin: 2rem 0;
+    padding: 2rem 0;
+    display: block;
+  }
+  .form-checkboxes,
+  .form-radios {
+    margin: 2rem 0;
+    padding: 1px 0 0 0;
   }
 }
 
@@ -32,13 +44,14 @@
   input + label:after {
     position: absolute;
     content: '';
-    top: 3rem;
+    top: 2rem;
     left: 4rem;
     height: 6rem;
     width: 6rem;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 1rem;
     border-style: solid;
+    border-color: $form-border-default-color;
     color: $material-color-dark;
     box-sizing: border-box;
   }
@@ -51,7 +64,7 @@
   input:checked + label:after {
     position: absolute;
     content: '';
-    top: 3rem;
+    top: 2rem;
     left: 5rem;
     height: 3rem;
     width: 7rem;
@@ -67,13 +80,14 @@
   input + label:after {
     position: absolute;
     content: '';
-    top: 3rem;
+    top: 2rem;
     left: 4rem;
     height: 6rem;
     width: 6rem;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 50%;
     border-style: solid;
+    border-color: $form-border-default-color;
     color: $material-color-dark;
     box-sizing: border-box;
   }
@@ -124,6 +138,7 @@
   background-color: transparent;
   cursor: pointer;
   font-size: inherit;
+  color: material-get-color($base-color);
   &:hover {
     @include material-background($accent-color, 'a100');
   }
@@ -187,4 +202,26 @@ input[type=submit] {
 
 .grippie {
   display: none;
+}
+
+
+/* Test ************************/
+form {
+  margin-left: 30%;
+}
+form .form-item {
+  position: relative;
+}
+form .form-type-radios > label,
+form .form-type-checkboxes > label,
+form .form-type-textarea > label,
+form .field-type-text-with-summary > label,
+form .form-type-textfield > label {
+  position: absolute;
+  left: -100rem;
+  top: 0;
+  width: 90rem;
+  text-align: right;
+  margin: 2rem 0;
+  padding: 2rem 0;
 }

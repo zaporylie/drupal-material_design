@@ -16,64 +16,81 @@
   border-width: 0 0 2px 0;
   border-style: solid;
   border-color: #eee;
+  font-size: inherit;
 }
-/* line 9, ../sass/_form.scss */
+/* line 10, ../sass/_form.scss */
 .input-field:focus, input[type=text]:focus {
   outline: 0;
   border-color: #3f51b5;
 }
-/* line 13, ../sass/_form.scss */
+/* line 14, ../sass/_form.scss */
 .input-field ~ label, input[type=text] ~ label {
   color: #eee;
 }
 
-/* line 18, ../sass/_form.scss */
+/* line 19, ../sass/_form.scss */
 .input-list, .form-type-radio,
 .form-type-checkbox {
-  padding: 4rem 4rem 4rem 18rem;
+  padding: 0 0 0 18rem;
+  margin-bottom: 6rem;
   position: relative;
 }
-/* line 21, ../sass/_form.scss */
+/* line 23, ../sass/_form.scss */
 .input-list input, .form-type-radio input,
 .form-type-checkbox input {
   position: absolute;
   left: -9999px;
+  cursor: pointer;
 }
-/* line 25, ../sass/_form.scss */
+/* line 28, ../sass/_form.scss */
 .input-list label, .form-type-radio label,
 .form-type-checkbox label {
   color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+  margin: 2rem 0;
+  padding: 2rem 0;
+  display: block;
+}
+/* line 35, ../sass/_form.scss */
+.input-list .form-checkboxes, .form-type-radio .form-checkboxes,
+.form-type-checkbox .form-checkboxes,
+.input-list .form-radios,
+.form-type-radio .form-radios,
+.form-type-checkbox .form-radios {
+  margin: 2rem 0;
+  padding: 1px 0 0 0;
 }
 
-/* line 31, ../sass/_form.scss */
+/* line 43, ../sass/_form.scss */
 .checkbox input + label:before, .form-type-checkbox input + label:before,
 .checkbox input + label:after,
 .form-type-checkbox input + label:after {
   position: absolute;
   content: '';
-  top: 3rem;
+  top: 2rem;
   left: 4rem;
   height: 6rem;
   width: 6rem;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 1rem;
   border-style: solid;
+  border-color: #eee;
   color: rgba(0, 0, 0, 0.87);
   box-sizing: border-box;
 }
-/* line 45, ../sass/_form.scss */
+/* line 58, ../sass/_form.scss */
 .checkbox input:checked + label, .form-type-checkbox input:checked + label {
   color: #3f51b5;
 }
-/* line 48, ../sass/_form.scss */
+/* line 61, ../sass/_form.scss */
 .checkbox input:checked + label:before, .form-type-checkbox input:checked + label:before {
   border-color: #3f51b5;
 }
-/* line 51, ../sass/_form.scss */
+/* line 64, ../sass/_form.scss */
 .checkbox input:checked + label:after, .form-type-checkbox input:checked + label:after {
   position: absolute;
   content: '';
-  top: 3rem;
+  top: 2rem;
   left: 5rem;
   height: 3rem;
   width: 7rem;
@@ -84,31 +101,32 @@
   border-color: #3f51b5;
 }
 
-/* line 66, ../sass/_form.scss */
+/* line 79, ../sass/_form.scss */
 .radio input + label:before, .form-type-radio input + label:before,
 .radio input + label:after,
 .form-type-radio input + label:after {
   position: absolute;
   content: '';
-  top: 3rem;
+  top: 2rem;
   left: 4rem;
   height: 6rem;
   width: 6rem;
-  border-width: 1px;
+  border-width: 2px;
   border-radius: 50%;
   border-style: solid;
+  border-color: #eee;
   color: rgba(0, 0, 0, 0.87);
   box-sizing: border-box;
 }
-/* line 80, ../sass/_form.scss */
+/* line 94, ../sass/_form.scss */
 .radio input:checked + label, .form-type-radio input:checked + label {
   color: #3f51b5;
 }
-/* line 83, ../sass/_form.scss */
+/* line 97, ../sass/_form.scss */
 .radio input:checked + label:before, .form-type-radio input:checked + label:before {
   border-color: #3f51b5;
 }
-/* line 86, ../sass/_form.scss */
+/* line 100, ../sass/_form.scss */
 .radio input:checked + label:after, .form-type-radio input:checked + label:after {
   position: absolute;
   content: '';
@@ -120,7 +138,7 @@
   height: 4rem;
 }
 
-/* line 99, ../sass/_form.scss */
+/* line 113, ../sass/_form.scss */
 .textarea, textarea {
   border-width: 0 0 1px 0;
   border-style: solid;
@@ -130,20 +148,20 @@
   padding: 1rem;
 }
 
-/* line 108, ../sass/_form.scss */
+/* line 122, ../sass/_form.scss */
 .fieldset, fieldset {
   border-width: 1px 0 0 0;
   border-style: solid;
   border-color: #eee;
 }
 
-/* line 114, ../sass/_form.scss */
+/* line 128, ../sass/_form.scss */
 .form-actions {
   padding: 1.5rem;
   text-align: right;
 }
 
-/* line 118, ../sass/_form.scss */
+/* line 132, ../sass/_form.scss */
 .button, button,
 input[type=submit], .actions button,
 .actions input[type=submit] {
@@ -155,36 +173,63 @@ input[type=submit], .actions button,
   background-color: transparent;
   cursor: pointer;
   font-size: inherit;
+  color: #3f51b5;
 }
-/* line 127, ../sass/_form.scss */
+/* line 142, ../sass/_form.scss */
 .button:hover, button:hover,
 input[type=submit]:hover {
   background-color: #ffe57f;
   color: rgba(0, 0, 0, 0.87);
 }
-/* line 130, ../sass/_form.scss */
+/* line 145, ../sass/_form.scss */
 .button:focus, button:focus,
 input[type=submit]:focus {
   background-color: #ffd740;
   color: rgba(0, 0, 0, 0.87);
 }
-/* line 133, ../sass/_form.scss */
+/* line 148, ../sass/_form.scss */
 .button:active, button:active,
 input[type=submit]:active {
   background-color: #ffc400;
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 150, ../sass/_form.scss */
+/* line 165, ../sass/_form.scss */
 .form-item .description {
   font-size: .8em;
   padding: 1em 0;
   opacity: .8;
 }
 
-/* line 188, ../sass/_form.scss */
+/* line 203, ../sass/_form.scss */
 .grippie {
   display: none;
+}
+
+/* Test ************************/
+/* line 209, ../sass/_form.scss */
+form {
+  margin-left: 30%;
+}
+
+/* line 212, ../sass/_form.scss */
+form .form-item {
+  position: relative;
+}
+
+/* line 215, ../sass/_form.scss */
+form .form-type-radios > label,
+form .form-type-checkboxes > label,
+form .form-type-textarea > label,
+form .field-type-text-with-summary > label,
+form .form-type-textfield > label {
+  position: absolute;
+  left: -100rem;
+  top: 0;
+  width: 90rem;
+  text-align: right;
+  margin: 2rem 0;
+  padding: 2rem 0;
 }
 
 /* line 1, ../sass/_html-elements.scss */
@@ -309,4 +354,17 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
 #header {
   background-color: #3f51b5;
   color: rgba(255, 255, 255, 0.87);
+  height: 16rem;
+}
+/* line 20, ../sass/_theme.scss */
+#header > * {
+  display: inline-block;
+}
+/* line 23, ../sass/_theme.scss */
+#header #logo {
+  padding: 1rem 4rem;
+}
+/* line 24, ../sass/_theme.scss */
+#header #logo img {
+  height: 14rem;
 }
