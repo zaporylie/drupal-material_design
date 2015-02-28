@@ -26,4 +26,20 @@
     }
     padding: 1rem 4rem;
   }
+  #site-name {
+
+  }
+}
+
+#content {
+  & > .title,
+  & > .content {
+    padding: 4rem 8rem;
+  }
+  & > .title {
+    @include material-background($base-color, '500');
+  }
+  & > .content {
+    padding-left: 24rem;
+  }
 }

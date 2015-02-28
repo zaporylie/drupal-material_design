@@ -66,10 +66,11 @@ function material_design_preprocess_page(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("node" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function material_design_preprocess_node(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
-
+  if ($variables['display_submitted']) {
+    $variables['submitted_by'] = t('Written by !username', array('!username' => $variables['name']));
+    $variables['submitted_on'] = t('!datetime', array('!datetime' => $variables['pubdate']));
+  }
   // Optionally, run node-type-specific preprocess functions, like
   // material_design_preprocess_node_page() or material_design_preprocess_node_story().
   $function = __FUNCTION__ . '_' . $variables['node']->type;
@@ -77,7 +78,6 @@ function material_design_preprocess_node(&$variables, $hook) {
     $function($variables, $hook);
   }
 }
-// */
 
 /**
  * Override or insert variables into the comment templates.

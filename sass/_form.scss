@@ -31,6 +31,7 @@
     margin: 2rem 0;
     padding: 2rem 0;
     display: block;
+    font-size: 1em;
   }
   .form-checkboxes,
   .form-radios {
@@ -154,14 +155,12 @@
 }
 
 .form-item {
-//  padding-left: 40%;
-//  position: relative;
-//  & + label {
-//    width: 40%;
-//    position: absolute;
-//    right: 40%;
-//    text-align: right;
-//  }
+  margin-bottom: 2em;
+  label {
+    display: block;
+    opacity: .87;
+    font-size: .9em;
+  }
   .description {
     font-size: .8em;
     padding: 1em 0;
@@ -169,8 +168,8 @@
   }
 }
 
-.form-type-radio,
-.form-type-checkbox {
+.form-item.form-type-radio,
+.form-item.form-type-checkbox {
   @extend .input-list;
 }
 .form-type-radio {
@@ -206,22 +205,26 @@ input[type=submit] {
 
 
 /* Test ************************/
-form {
-  margin-left: 30%;
-}
-form .form-item {
-  position: relative;
-}
-form .form-type-radios > label,
-form .form-type-checkboxes > label,
-form .form-type-textarea > label,
-form .field-type-text-with-summary > label,
-form .form-type-textfield > label {
-  position: absolute;
-  left: -100rem;
-  top: 0;
-  width: 90rem;
-  text-align: right;
-  margin: 2rem 0;
-  padding: 2rem 0;
+//form {
+//  margin-left: 30%;
+//}
+//form .form-item {
+//  position: relative;
+//}
+//form .form-type-radios > label,
+//form .form-type-checkboxes > label,
+//form .form-type-textarea > label,
+//form .field-type-text-with-summary > label,
+//form .form-type-textfield > label {
+//  position: absolute;
+//  left: -100rem;
+//  top: 0;
+//  width: 90rem;
+//  text-align: right;
+//  margin: 2rem 0;
+//  padding: 2rem 0;
+//}
+.form-item {
+
+
 }
