@@ -46,8 +46,9 @@
         <?php endif; ?>
         <?php print render($title_suffix); ?>
         <?php print $breadcrumb; ?>
-        <?php print render($tabs); ?>
+        <?php print render($primary_local_tasks); ?>
       </div>
+      <?php print render($secondary_local_tasks); ?>
       <?php print render($page['help']); ?>
       <?php print $messages; ?>
       <?php if ($action_links): ?>

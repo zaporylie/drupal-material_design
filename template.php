@@ -52,11 +52,17 @@ function material_design_preprocess_html(&$variables, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function material_design_preprocess_page(&$variables, $hook) {
-  $variables['sample_variable'] = t('Lorem ipsum.');
+  $variables['primary_local_tasks'] = array(
+    '#theme' => 'menu_local_tasks',
+    '#primary' => menu_primary_local_tasks(),
+  );
+  $variables['secondary_local_tasks'] = array(
+    '#theme' => 'menu_local_tasks',
+    '#secondary' => menu_secondary_local_tasks(),
+  );
+  $variables['secondary_local_tasks'] = menu_secondary_local_tasks();
 }
-// */
 
 /**
  * Override or insert variables into the node templates.

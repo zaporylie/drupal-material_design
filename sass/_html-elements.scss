@@ -34,6 +34,8 @@ a {
 
 table {
   width: 100%;
+  border-collapse: collapse;
+  font-size: .9em;
   tr {
     th {
       border-bottom: 1px solid $form-border-default-color;
