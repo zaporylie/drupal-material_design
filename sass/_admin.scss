@@ -1,0 +1,12 @@
+.operations {
+  clear: both;
+  border-top: 2px solid $form-border-default-color;
+  text-align: right;
+  li {
+    border: 0;
+    float: right;
+    a {
+      @extend .button;
+    }
+  }
+}

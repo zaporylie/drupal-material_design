@@ -11,6 +11,7 @@
   }
 
 }
+
 .tabs {
   &.primary {
     margin: 0 0 -4rem 0;
@@ -31,6 +32,47 @@
         a {
           border-color: material-get-color($accent-color);
         }
+      }
+    }
+  }
+}
+
+#messages {
+  & > * {
+    padding: 4rem 8rem;
+  }
+  .warning {
+    @include material-background('yellow', '100');
+  }
+}
+
+.action-links {
+  position: fixed;
+  bottom: 6rem;
+  right: 6rem;
+  li {
+    a {
+      @extend .floating-button;
+    }
+    &:first-child {
+      display: block;
+    }
+  }
+}
+
+.links {
+  &.inline {
+    list-style: none;
+    margin: 2rem 0 0 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: $form-border-default-color;
+    padding: 2rem 0 0 0;
+    text-align: right;
+    li {
+      display: inline;
+      a {
+        @extend button;
       }
     }
   }

@@ -40,17 +40,21 @@
       <?php print render($page['highlighted']); ?>
       <a id="main-content"></a>
       <div class="title">
+        <?php print $breadcrumb; ?>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
           <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
-        <?php print $breadcrumb; ?>
         <?php print render($primary_local_tasks); ?>
       </div>
       <?php print render($secondary_local_tasks); ?>
       <?php print render($page['help']); ?>
-      <?php print $messages; ?>
+      <?php if ($messages): ?>
+        <div id="messages">
+          <?php print $messages; ?>
+        </div>
+      <?php endif; ?>
       <?php if ($action_links): ?>
         <ul class="action-links"><?php print render($action_links); ?></ul>
       <?php endif; ?>

@@ -7,11 +7,18 @@
 // init
 
 .region {
-
+  &.region-help {
+    padding: 4rem 8rem;
+    @include material-background('grey', '100');
+    @include shadow;
+  }
 }
 
 .sidebar {
 
+}
+
+#page {
 }
 
 #header {
@@ -40,6 +47,14 @@
     @include material-background($base-color, '500');
   }
   & > .content {
-    padding-left: 24rem;
+  }
+}
+
+body.page-node {
+  &.section-node {
+    @include material-background('white');
+    #content > .content {
+      padding-left: 24rem;
+    }
   }
 }

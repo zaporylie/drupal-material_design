@@ -6,6 +6,7 @@ body {
   line-height: 1.6em;
   font-family: "Roboto", Arial, sans-serif;
   margin: 0;
+  @include material-background('grey', '100');
 }
 h1 {
   font-size: $base-unit * 8.5;
@@ -85,4 +86,10 @@ div.vertical-tabs {
       }
     }
   }
+}
+
+.description {
+  font-size: .8em;
+  padding: 1em 0;
+  opacity: .8;
 }

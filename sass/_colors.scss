@@ -323,7 +323,15 @@ $material-colors: (
                 '800': material-build-map(#37474f, $material-color-light),
                 '900': material-build-map(#263238, $material-color-light),
                 '1000': material-build-map(#11171a, $material-color-light),
-        )
+        ),
+
+        'black': (
+                '500': material-build-map(#000000, #ffffff),
+        ),
+
+        'white': (
+                '500': material-build-map(#ffffff, #000000),
+        ),
 );
 
 
