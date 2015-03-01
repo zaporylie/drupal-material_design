@@ -46,9 +46,20 @@
           <h1 class="page__title title" id="page-title"><?php print $title; ?></h1>
         <?php endif; ?>
         <?php print render($title_suffix); ?>
-        <?php print render($primary_local_tasks); ?>
+
+        <?php if ($secondary_local_tasks = render($secondary_local_tasks)): ?>
+          <div id="secondary-local-tasks">
+            <?php print $secondary_local_tasks; ?>
+          </div>
+        <?php endif; ?>
+
+        <?php if ($primary_local_tasks = render($primary_local_tasks)): ?>
+          <div id="primary-local-tasks">
+            <?php print $primary_local_tasks; ?>
+          </div>
+        <?php endif; ?>
+
       </div>
-      <?php print render($secondary_local_tasks); ?>
       <?php print render($page['help']); ?>
       <?php if ($messages): ?>
         <div id="messages">

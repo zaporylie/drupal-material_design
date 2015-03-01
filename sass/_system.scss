@@ -14,8 +14,8 @@
 
 .tabs {
   &.primary {
-    margin: 0 0 -4rem 0;
     font-size: .9em;
+    margin: 0;
     text-transform: uppercase;
     list-style: none;
     padding: 0;
@@ -35,6 +35,37 @@
       }
     }
   }
+  &.secondary {
+    text-transform: uppercase;
+    list-style: none;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    @include shadow;
+    @include menu;
+    @include material-background('white');
+  }
+}
+#primary-local-tasks {
+  margin-right: 3em;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#secondary-local-tasks {
+  position: relative;
+  float: right;
+  &:before {
+    display: block;
+    content: 't';
+    padding: 1em;
+  }
+  &:hover {
+    .tabs.secondary {
+      display: block;
+    }
+  }
 }
 
 #messages {
@@ -43,6 +74,9 @@
   }
   .warning {
     @include material-background('yellow', '100');
+  }
+  .error {
+    @include material-background('red', '900');
   }
 }
 
@@ -76,4 +110,8 @@
       }
     }
   }
+}
+
+ul.menu {
+  @include menu;
 }

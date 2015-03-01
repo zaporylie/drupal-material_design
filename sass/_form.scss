@@ -126,7 +126,7 @@
   border-width: 2px 0 0 0;
   border-style: solid;
   border-color: $form-border-default-color;
-  margin: 0 -8rem;
+  margin: 0 -8rem 8rem;
   padding: 0 8rem;
   &.collapsed {
     height: auto !important;
@@ -160,9 +160,10 @@
     clear: both;
   }
   & fieldset {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 0;
-    right: 0;
+    padding-right: 0;
   }
 }
 

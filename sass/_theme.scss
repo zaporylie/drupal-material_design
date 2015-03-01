@@ -41,12 +41,17 @@
 #content {
   & > .title,
   & > .content {
-    padding: 4rem 8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
   & > .title {
     @include material-background($base-color, '500');
+    position: relative;
+    padding-top: 1px;
   }
   & > .content {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
   }
 }
 

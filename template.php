@@ -61,7 +61,6 @@ function material_design_preprocess_page(&$variables, $hook) {
     '#theme' => 'menu_local_tasks',
     '#secondary' => menu_secondary_local_tasks(),
   );
-  $variables['secondary_local_tasks'] = menu_secondary_local_tasks();
 }
 
 /**
@@ -145,7 +144,7 @@ function material_design_preprocess_form_element(&$variables) {
   if (in_array($variables['element']['#type'], $available)) {
     $variables['element']['#title_display'] = 'after';
   }
-  if ($variables['element']['#title_display'] == 'before') {
+  if (isset($variables['element']['#title_display']) && $variables['element']['#title_display'] == 'before') {
     $variables['element']['#theme_wrappers'][] = 'form_element_label_before_wrapper';
   }
 
