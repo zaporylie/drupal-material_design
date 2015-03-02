@@ -12,6 +12,10 @@
     @include material-background('grey', '100');
     @include shadow;
   }
+  &.region-highlighted {
+    img {
+    }
+  }
 }
 
 .sidebar {
