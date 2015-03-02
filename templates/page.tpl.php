@@ -11,35 +11,35 @@
 <div id="page">
 
   <header class="header" id="header" role="banner">
+    <div class="container">
 
-    <?php if ($logo): ?>
-      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
-    <?php endif; ?>
+      <?php if ($logo): ?>
+        <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+      <?php endif; ?>
 
-    <?php if ($site_name || $site_slogan): ?>
-      <div class="header__name-and-slogan" id="name-and-slogan">
-        <?php if ($site_name): ?>
-          <h1 class="header__site-name" id="site-name">
-            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
-          </h1>
-        <?php endif; ?>
+      <?php if ($site_name || $site_slogan): ?>
+        <div class="header__name-and-slogan" id="name-and-slogan">
+          <?php if ($site_name): ?>
+            <h1 class="header__site-name" id="site-name">
+              <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" class="header__site-link" rel="home"><span><?php print $site_name; ?></span></a>
+            </h1>
+          <?php endif; ?>
 
-        <?php if ($site_slogan): ?>
-          <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
-        <?php endif; ?>
-      </div>
-    <?php endif; ?>
+          <?php if ($site_slogan): ?>
+            <div class="header__site-slogan" id="site-slogan"><?php print $site_slogan; ?></div>
+          <?php endif; ?>
+        </div>
+      <?php endif; ?>
 
-    <?php print render($page['header']); ?>
+      <?php print render($page['header']); ?>
 
+    </div>
   </header>
 
-  <div id="main">
-
-    <div id="content" class="column" role="main">
-      <?php print render($page['highlighted']); ?>
-      <a id="main-content"></a>
-      <div class="title">
+  <div id="main" role="main">
+    <?php print render($page['highlighted']); ?>
+    <div id="title">
+      <div class="container">
         <?php print $breadcrumb; ?>
         <?php print render($title_prefix); ?>
         <?php if ($title): ?>
@@ -58,21 +58,24 @@
             <?php print $primary_local_tasks; ?>
           </div>
         <?php endif; ?>
-
       </div>
+
+      <?php if ($action_links): ?>
+        <ul class="action-links"><?php print render($action_links); ?></ul>
+      <?php endif; ?>
+    </div>
+    <div id="content" class="column container">
       <?php print render($page['help']); ?>
       <?php if ($messages): ?>
         <div id="messages">
           <?php print $messages; ?>
         </div>
       <?php endif; ?>
-      <?php if ($action_links): ?>
-        <ul class="action-links"><?php print render($action_links); ?></ul>
-      <?php endif; ?>
+      <a id="main-content"></a>
       <div class="content">
         <?php print render($page['content']); ?>
+        <?php print $feed_icons; ?>
       </div>
-      <?php print $feed_icons; ?>
     </div>
 
     <div id="navigation">

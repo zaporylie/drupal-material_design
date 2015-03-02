@@ -3,27 +3,41 @@
  */
 
 
-
+.container {
+  @include container;
+}
 // init
 
 .region {
   &.region-help {
+    @include material-background('grey', '50');
+    border-width: 1px 1px 0 1px;
+    border-style: solid;
+    border-color: $form-border-default-color;
     padding: 4rem 8rem;
-    @include material-background('grey', '100');
-    @include shadow;
   }
   &.region-highlighted {
     img {
+      width: 100%;
     }
   }
   &.region-sidebar-first {
+    @include material-background('white');
+    border-right: 1px solid $form-border-default-color;
     position: fixed;
     left: 0;
     width: 75rem;
     top: 0;
     bottom: 0;
-    @include material-background('white');
     padding-top: 16rem;
+    z-index: 11;
+    .block {
+      border-top: 1px solid $form-border-default-color;
+      .block-title {
+        padding: 0 4rem;
+        font-weight: 400;
+      }
+    }
   }
 }
 
@@ -35,10 +49,11 @@
 }
 
 #header {
-  margin-left: 75rem;
   @include material-background($base-color);
-  height: 16rem;
-  & > * {
+  position: relative;
+  z-index: 10;
+  margin-left: 75rem;
+  .container > * {
     display: inline-block;
   }
   #logo {
@@ -52,29 +67,51 @@
   }
 }
 
+#title {
+  @include material-background($base-color);
+  @include shadow;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  #page-title {
+//    padding-left: 4rem;
+//    padding-right: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+body {
+  &.sidebar-first {
+    #main {
+      margin-left: 75rem;
+    }
+  }
+}
+
 #content {
-  margin-left: 75rem;
-  & > .title,
+  margin-top: 8rem;
+  margin-bottom: 8rem;
   & > .content {
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-  & > .title {
-    @include material-background($base-color, '500');
-    position: relative;
-    padding-top: 1px;
-  }
-  & > .content {
     padding-top: 8rem;
     padding-bottom: 8rem;
+    @include material-background('white');
+    border: 1px solid $form-border-default-color;
   }
 }
 
 body.page-node {
   &.section-node {
-    @include material-background('white');
     #content > .content {
       padding-left: 24rem;
+    }
+  }
+  &:not(.page-node-) {
+    #content > .content {
+      border: 0;
+      background: transparent;
+      padding: 0;
     }
   }
 }

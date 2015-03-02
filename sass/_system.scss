@@ -31,6 +31,7 @@
       &.is-active {
         a {
           border-color: material-get-color($accent-color);
+          color: material-get-color($accent-color);
         }
       }
     }
@@ -52,13 +53,14 @@
   margin-right: 3em;
   overflow: hidden;
   white-space: nowrap;
+  margin-bottom: -1px;
 }
 #secondary-local-tasks {
   position: relative;
   float: right;
   &:before {
     display: block;
-    content: 't';
+    content: ':';
     padding: 1em;
   }
   &:hover {
@@ -68,15 +70,16 @@
   }
 }
 
-#messages {
-  & > * {
-    padding: 4rem 8rem;
-  }
-  .warning {
+.messages {
+  padding: 4rem 8rem;
+  &.warning {
     @include material-background('yellow', '100');
   }
-  .error {
-    @include material-background('red', '900');
+  &.error {
+    @include material-background('red', '500');
+  }
+  &.status {
+    @include material-background('light-green', '500');
   }
 }
 

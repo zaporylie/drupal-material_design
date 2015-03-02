@@ -45,9 +45,10 @@
 }
 /* line 32, ../sass/_system.scss */
 .tabs.primary li.is-active a {
-  border-color: #3f51b5;
+  border-color: #cddc39;
+  color: #cddc39;
 }
-/* line 38, ../sass/_system.scss */
+/* line 39, ../sass/_system.scss */
 .tabs.secondary {
   text-transform: uppercase;
   list-style: none;
@@ -56,63 +57,73 @@
   right: 0;
   top: 0;
   z-index: 1;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
   padding: 0;
   font-size: .9em;
   margin: 2rem 0;
   background-color: #ffffff;
   color: #000000;
 }
-/* line 48, ../sass/_mixins.scss */
+/* line 54, ../sass/_mixins.scss */
 .tabs.secondary li a {
   display: block;
-  padding: 5rem 4rem;
+  padding: 4rem 5rem;
 }
-/* line 51, ../sass/_mixins.scss */
+/* line 57, ../sass/_mixins.scss */
 .tabs.secondary li a:hover {
   background-color: #f5f5f5;
   color: rgba(0, 0, 0, 0.87);
 }
+/* line 61, ../sass/_mixins.scss */
+.tabs.secondary li ul {
+  font-size: 1em;
+}
 
-/* line 51, ../sass/_system.scss */
+/* line 52, ../sass/_system.scss */
 #primary-local-tasks {
   margin-right: 3em;
   overflow: hidden;
   white-space: nowrap;
+  margin-bottom: -1px;
 }
 
-/* line 56, ../sass/_system.scss */
+/* line 58, ../sass/_system.scss */
 #secondary-local-tasks {
   position: relative;
   float: right;
 }
-/* line 59, ../sass/_system.scss */
+/* line 61, ../sass/_system.scss */
 #secondary-local-tasks:before {
   display: block;
-  content: 't';
+  content: ':';
   padding: 1em;
 }
-/* line 65, ../sass/_system.scss */
+/* line 67, ../sass/_system.scss */
 #secondary-local-tasks:hover .tabs.secondary {
   display: block;
 }
 
-/* line 72, ../sass/_system.scss */
-#messages > * {
+/* line 73, ../sass/_system.scss */
+.messages {
   padding: 4rem 8rem;
 }
 /* line 75, ../sass/_system.scss */
-#messages .warning {
+.messages.warning {
   background-color: #fff9c4;
   color: rgba(0, 0, 0, 0.87);
 }
 /* line 78, ../sass/_system.scss */
-#messages .error {
-  background-color: #b71c1c;
-  color: rgba(255, 255, 255, 0.87);
+.messages.error {
+  background-color: #f44336;
+  color: #fff;
+}
+/* line 81, ../sass/_system.scss */
+.messages.status {
+  background-color: #8bc34a;
+  color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 83, ../sass/_system.scss */
+/* line 86, ../sass/_system.scss */
 .action-links {
   position: fixed;
   bottom: 6rem;
@@ -120,13 +131,13 @@
   display: flex;
   flex-direction: column-reverse;
 }
-/* line 90, ../sass/_system.scss */
+/* line 93, ../sass/_system.scss */
 ul.action-links {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 94, ../sass/_system.scss */
+/* line 97, ../sass/_system.scss */
 ul.action-links li {
   height: 14rem;
   width: 14rem;
@@ -134,7 +145,7 @@ ul.action-links li {
   position: relative;
   z-index: 1;
 }
-/* line 71, ../sass/_mixins.scss */
+/* line 80, ../sass/_mixins.scss */
 ul.action-links li a {
   background-color: #212121;
   color: rgba(255, 255, 255, 0.87);
@@ -148,18 +159,18 @@ ul.action-links li a {
   top: 50%;
   margin-top: -1.3em;
 }
-/* line 78, ../sass/_mixins.scss */
+/* line 87, ../sass/_mixins.scss */
 ul.action-links li a:before {
   position: absolute;
   right: 0;
   width: 24rem;
   content: '+';
 }
-/* line 86, ../sass/_mixins.scss */
+/* line 95, ../sass/_mixins.scss */
 ul.action-links li:before {
-  background-color: #3f51b5;
-  color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+  background-color: #cddc39;
+  color: rgba(0, 0, 0, 0.87);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   z-index: 1;
   border-radius: 50%;
@@ -169,12 +180,12 @@ ul.action-links li:before {
   content: '';
   position: absolute;
 }
-/* line 97, ../sass/_system.scss */
+/* line 100, ../sass/_system.scss */
 ul.action-links li:first-child {
   z-index: 2;
 }
 
-/* line 106, ../sass/_system.scss */
+/* line 109, ../sass/_system.scss */
 .links.inline {
   list-style: none;
   margin: 2rem 0 0 0;
@@ -184,26 +195,30 @@ ul.action-links li:first-child {
   padding: 2rem 0 0 0;
   text-align: right;
 }
-/* line 114, ../sass/_system.scss */
+/* line 117, ../sass/_system.scss */
 .links.inline li {
   display: inline;
 }
 
-/* line 123, ../sass/_system.scss */
+/* line 126, ../sass/_system.scss */
 ul.menu {
   padding: 0;
   font-size: .9em;
   margin: 2rem 0;
 }
-/* line 48, ../sass/_mixins.scss */
+/* line 54, ../sass/_mixins.scss */
 ul.menu li a {
   display: block;
-  padding: 5rem 4rem;
+  padding: 4rem 5rem;
 }
-/* line 51, ../sass/_mixins.scss */
+/* line 57, ../sass/_mixins.scss */
 ul.menu li a:hover {
   background-color: #f5f5f5;
   color: rgba(0, 0, 0, 0.87);
+}
+/* line 61, ../sass/_mixins.scss */
+ul.menu li ul {
+  font-size: 1em;
 }
 
 /* line 1, ../sass/_admin.scss */
@@ -233,7 +248,7 @@ ul.menu li a:hover {
 /* line 11, ../sass/_form.scss */
 .input-field:focus, input[type=text]:focus {
   outline: 0;
-  border-color: #ffc107;
+  border-color: #795548;
 }
 /* line 15, ../sass/_form.scss */
 .input-field ~ label, input[type=text] ~ label {
@@ -244,7 +259,7 @@ ul.menu li a:hover {
 .input-list, .form-item.form-type-radio,
 .form-item.form-type-checkbox {
   padding: 0 0 0 18rem;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
   position: relative;
 }
 /* line 24, ../sass/_form.scss */
@@ -282,8 +297,8 @@ ul.menu li a:hover {
   content: '';
   top: 2rem;
   left: 4rem;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   border-width: 2px;
   border-radius: 1rem;
   border-style: solid;
@@ -293,11 +308,11 @@ ul.menu li a:hover {
 }
 /* line 60, ../sass/_form.scss */
 .checkbox input:checked + label, .form-type-checkbox input:checked + label {
-  color: #ffc107;
+  color: #795548;
 }
 /* line 63, ../sass/_form.scss */
 .checkbox input:checked + label:before, .form-type-checkbox input:checked + label:before {
-  border-color: #ffc107;
+  border-color: #795548;
 }
 /* line 66, ../sass/_form.scss */
 .checkbox input:checked + label:after, .form-type-checkbox input:checked + label:after {
@@ -306,12 +321,12 @@ ul.menu li a:hover {
   top: 2rem;
   left: 5rem;
   height: 3rem;
-  width: 7rem;
+  width: 5rem;
   transform: rotate(-45deg);
   border-width: 0 0 1rem 1rem;
   border-style: solid;
   border-radius: 0 0 0 1rem;
-  border-color: #ffc107;
+  border-color: #795548;
 }
 
 /* line 81, ../sass/_form.scss */
@@ -322,8 +337,8 @@ ul.menu li a:hover {
   content: '';
   top: 2rem;
   left: 4rem;
-  height: 6rem;
-  width: 6rem;
+  height: 5rem;
+  width: 5rem;
   border-width: 2px;
   border-radius: 50%;
   border-style: solid;
@@ -333,11 +348,11 @@ ul.menu li a:hover {
 }
 /* line 96, ../sass/_form.scss */
 .radio input:checked + label, .form-type-radio input:checked + label {
-  color: #ffc107;
+  color: #795548;
 }
 /* line 99, ../sass/_form.scss */
 .radio input:checked + label:before, .form-type-radio input:checked + label:before {
-  border-color: #ffc107;
+  border-color: #795548;
 }
 /* line 102, ../sass/_form.scss */
 .radio input:checked + label:after, .form-type-radio input:checked + label:after {
@@ -346,9 +361,9 @@ ul.menu li a:hover {
   box-sizing: border-box;
   margin: 1rem;
   border: 0;
-  background-color: #ffc107;
-  width: 4rem;
-  height: 4rem;
+  background-color: #795548;
+  width: 3rem;
+  height: 3rem;
 }
 
 /* line 115, ../sass/_form.scss */
@@ -364,10 +379,10 @@ ul.menu li a:hover {
 
 /* line 125, ../sass/_form.scss */
 .fieldset, fieldset {
-  border-width: 2px 0 0 0;
+  border-width: 1px 0 0 0;
   border-style: solid;
   border-color: #ddd;
-  margin: 0 -8rem 8rem;
+  margin: 0 -4rem 8rem;
   padding: 0 8rem;
 }
 /* line 131, ../sass/_form.scss */
@@ -431,26 +446,26 @@ input[type=submit], .actions button,
   background-color: transparent;
   cursor: pointer;
   font-size: inherit;
-  color: #ffc107;
+  color: #795548;
   display: inline-block;
 }
 /* line 185, ../sass/_form.scss */
 .button:hover, .operations li a:hover, button:hover, .links.inline li a:hover,
 input[type=submit]:hover {
-  background-color: #8c9eff;
+  background-color: #f4ff81;
   color: rgba(0, 0, 0, 0.87);
 }
 /* line 188, ../sass/_form.scss */
 .button:focus, .operations li a:focus, button:focus, .links.inline li a:focus,
 input[type=submit]:focus {
-  background-color: #536dfe;
-  color: #fff;
+  background-color: #eeff41;
+  color: rgba(0, 0, 0, 0.87);
 }
 /* line 191, ../sass/_form.scss */
 .button:active, .operations li a:active, button:active, .links.inline li a:active,
 input[type=submit]:active {
-  background-color: #3d5afe;
-  color: #fff;
+  background-color: #c6ff00;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 /* line 199, ../sass/_form.scss */
@@ -597,12 +612,12 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
 /* line 2, ../sass/_article.scss */
 .node.node-teaser {
   padding: 4rem;
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
   background-color: #ffffff;
   color: #000000;
   margin-bottom: 6rem;
 }
-/* line 36, ../sass/_mixins.scss */
+/* line 42, ../sass/_mixins.scss */
 .node.node-teaser .links.inline {
   margin: 0 -4rem;
   padding-left: 4rem;
@@ -610,15 +625,16 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
 }
 /* line 4, ../sass/_article.scss */
 .node.node-teaser .field-type-image {
-  margin: 0 -4rem;
+  margin-left: -4rem;
+  margin-right: -4rem;
 }
-/* line 11, ../sass/_article.scss */
+/* line 12, ../sass/_article.scss */
 .node.view-mode-full .submitted {
   position: relative;
   margin-bottom: 16rem;
   display: block;
 }
-/* line 15, ../sass/_article.scss */
+/* line 16, ../sass/_article.scss */
 .node.view-mode-full .submitted .user-picture {
   display: block;
   width: 12rem;
@@ -628,31 +644,31 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
   overflow: hidden;
   border-radius: 50%;
 }
-/* line 23, ../sass/_article.scss */
+/* line 24, ../sass/_article.scss */
 .node.view-mode-full .submitted .user-picture img {
   width: 100%;
   height: 100%;
 }
-/* line 28, ../sass/_article.scss */
+/* line 29, ../sass/_article.scss */
 .node.view-mode-full .submitted time {
   display: block;
   opacity: .5;
   font-size: .9em;
 }
-/* line 34, ../sass/_article.scss */
+/* line 35, ../sass/_article.scss */
 .node.view-mode-full .links.inline {
   margin-left: -24rem;
-  margin-right: -8rem;
+  margin-right: -4rem;
 }
-/* line 39, ../sass/_article.scss */
+/* line 40, ../sass/_article.scss */
 .node .submitted {
   display: none;
 }
-/* line 42, ../sass/_article.scss */
+/* line 43, ../sass/_article.scss */
 .node .field {
   margin-bottom: 8rem;
 }
-/* line 44, ../sass/_article.scss */
+/* line 45, ../sass/_article.scss */
 .node .field .field-label {
   display: block;
   opacity: .87;
@@ -664,7 +680,7 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
 /* line 1, ../sass/_normalize.scss */
 :focus {
   outline: none;
-  border-color: #ffc107;
+  border-color: #795548;
 }
 
 /* Layout rules */
@@ -673,73 +689,111 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
 /**
  * @file
  */
-/* line 10, ../sass/_theme.scss */
-.region.region-help {
-  padding: 4rem 8rem;
-  background-color: #f5f5f5;
-  color: rgba(0, 0, 0, 0.87);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+/* line 6, ../sass/_theme.scss */
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
 }
-/* line 19, ../sass/_theme.scss */
+
+/* line 12, ../sass/_theme.scss */
+.region.region-help {
+  background-color: #fafafa;
+  color: rgba(0, 0, 0, 0.87);
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+  border-color: #ddd;
+  padding: 4rem 8rem;
+}
+/* line 20, ../sass/_theme.scss */
+.region.region-highlighted img {
+  width: 100%;
+}
+/* line 24, ../sass/_theme.scss */
 .region.region-sidebar-first {
+  background-color: #ffffff;
+  color: #000000;
+  border-right: 1px solid #ddd;
   position: fixed;
   left: 0;
   width: 75rem;
   top: 0;
   bottom: 0;
-  background-color: #ffffff;
-  color: #000000;
   padding-top: 16rem;
+  z-index: 11;
+}
+/* line 34, ../sass/_theme.scss */
+.region.region-sidebar-first .block {
+  border-top: 1px solid #ddd;
+}
+/* line 36, ../sass/_theme.scss */
+.region.region-sidebar-first .block .block-title {
+  padding: 0 4rem;
+  font-weight: 400;
 }
 
-/* line 37, ../sass/_theme.scss */
+/* line 51, ../sass/_theme.scss */
 #header {
+  background-color: #795548;
+  color: rgba(255, 255, 255, 0.87);
+  position: relative;
+  z-index: 10;
   margin-left: 75rem;
-  background-color: #ffc107;
-  color: rgba(0, 0, 0, 0.87);
-  height: 16rem;
 }
-/* line 41, ../sass/_theme.scss */
-#header > * {
+/* line 56, ../sass/_theme.scss */
+#header .container > * {
   display: inline-block;
 }
-/* line 44, ../sass/_theme.scss */
+/* line 59, ../sass/_theme.scss */
 #header #logo {
   padding: 1rem 4rem;
 }
-/* line 45, ../sass/_theme.scss */
+/* line 60, ../sass/_theme.scss */
 #header #logo img {
   height: 14rem;
 }
 
-/* line 55, ../sass/_theme.scss */
-#content {
-  margin-left: 75rem;
-}
-/* line 57, ../sass/_theme.scss */
-#content > .title, #content > .content {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-/* line 62, ../sass/_theme.scss */
-#content > .title {
-  background-color: #ffc107;
-  color: rgba(0, 0, 0, 0.87);
-  position: relative;
+/* line 70, ../sass/_theme.scss */
+#title {
+  background-color: #795548;
+  color: rgba(255, 255, 255, 0.87);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
   padding-top: 1px;
+  padding-bottom: 1px;
 }
-/* line 67, ../sass/_theme.scss */
-#content > .content {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+/* line 75, ../sass/_theme.scss */
+#title #page-title {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-/* line 74, ../sass/_theme.scss */
-body.page-node.section-node {
+/* line 85, ../sass/_theme.scss */
+body.sidebar-first #main {
+  margin-left: 75rem;
+}
+
+/* line 91, ../sass/_theme.scss */
+#content {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+/* line 94, ../sass/_theme.scss */
+#content > .content {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
   background-color: #ffffff;
   color: #000000;
+  border: 1px solid #ddd;
 }
-/* line 76, ../sass/_theme.scss */
+
+/* line 106, ../sass/_theme.scss */
 body.page-node.section-node #content > .content {
   padding-left: 24rem;
+}
+/* line 111, ../sass/_theme.scss */
+body.page-node:not(.page-node-) #content > .content {
+  border: 0;
+  background: transparent;
+  padding: 0;
 }

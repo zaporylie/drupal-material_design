@@ -62,6 +62,27 @@ function material_design_preprocess_page(&$variables, $hook) {
     '#secondary' => menu_secondary_local_tasks(),
   );
 }
+/**
+ * Override or insert variables into the field templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ */
+function material_design_process_field(&$variables) {
+  $element = $variables['element'];
+
+  // Field type image
+  if ($element['#field_type'] == 'image') {
+
+    // Reduce number of images in teaser view mode to single image
+    if ($element['#view_mode'] == 'teaser') {
+      $item = reset($variables['items']);
+      $variables['items'] = array($item);
+    }
+
+  }
+
+}
 
 /**
  * Override or insert variables into the node templates.
