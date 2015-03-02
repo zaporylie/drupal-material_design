@@ -522,23 +522,30 @@ a {
   cursor: pointer;
 }
 
-/* line 37, ../sass/_html-elements.scss */
+/* line 36, ../sass/_html-elements.scss */
+img {
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+
+/* line 42, ../sass/_html-elements.scss */
 table {
   width: 100%;
   border-collapse: collapse;
   font-size: .9em;
 }
-/* line 42, ../sass/_html-elements.scss */
+/* line 47, ../sass/_html-elements.scss */
 table tr th {
   border-bottom: 1px solid #ddd;
   font-weight: 500;
 }
-/* line 50, ../sass/_html-elements.scss */
+/* line 55, ../sass/_html-elements.scss */
 table tr:hover th,
 table tr:hover td {
   border-bottom: 1px solid #ddd;
 }
-/* line 56, ../sass/_html-elements.scss */
+/* line 61, ../sass/_html-elements.scss */
 table th,
 table td {
   text-align: left;
@@ -547,15 +554,15 @@ table td {
   border-bottom: 1px solid transparent;
 }
 
-/* line 65, ../sass/_html-elements.scss */
+/* line 70, ../sass/_html-elements.scss */
 div.vertical-tabs {
   border: 0;
 }
-/* line 67, ../sass/_html-elements.scss */
+/* line 72, ../sass/_html-elements.scss */
 div.vertical-tabs ul.vertical-tabs-list {
   border: 0;
 }
-/* line 69, ../sass/_html-elements.scss */
+/* line 74, ../sass/_html-elements.scss */
 div.vertical-tabs ul.vertical-tabs-list li {
   background-color: transparent;
   padding-right: 8rem;
@@ -563,24 +570,24 @@ div.vertical-tabs ul.vertical-tabs-list li {
   border-style: solid;
   border-color: #ddd;
 }
-/* line 70, ../sass/_html-elements.scss */
+/* line 75, ../sass/_html-elements.scss */
 div.vertical-tabs ul.vertical-tabs-list li a {
   padding: 1em .5em;
 }
-/* line 79, ../sass/_html-elements.scss */
+/* line 84, ../sass/_html-elements.scss */
 div.vertical-tabs ul.vertical-tabs-list li:first-child {
   border-top-width: 1px;
 }
-/* line 82, ../sass/_html-elements.scss */
+/* line 87, ../sass/_html-elements.scss */
 div.vertical-tabs ul.vertical-tabs-list li.selected:first-child {
   border-top: 0;
 }
-/* line 85, ../sass/_html-elements.scss */
+/* line 90, ../sass/_html-elements.scss */
 div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
   border-bottom: 0;
 }
 
-/* line 92, ../sass/_html-elements.scss */
+/* line 97, ../sass/_html-elements.scss */
 .description {
   font-size: .8em;
   padding: 1em 0;
@@ -601,13 +608,17 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-/* line 6, ../sass/_article.scss */
+/* line 4, ../sass/_article.scss */
+.node.node-teaser .field-type-image {
+  margin: 0 -4rem;
+}
+/* line 11, ../sass/_article.scss */
 .node.view-mode-full .submitted {
   position: relative;
   margin-bottom: 16rem;
   display: block;
 }
-/* line 10, ../sass/_article.scss */
+/* line 15, ../sass/_article.scss */
 .node.view-mode-full .submitted .user-picture {
   display: block;
   width: 12rem;
@@ -617,31 +628,31 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
   overflow: hidden;
   border-radius: 50%;
 }
-/* line 18, ../sass/_article.scss */
+/* line 23, ../sass/_article.scss */
 .node.view-mode-full .submitted .user-picture img {
   width: 100%;
   height: 100%;
 }
-/* line 23, ../sass/_article.scss */
+/* line 28, ../sass/_article.scss */
 .node.view-mode-full .submitted time {
   display: block;
   opacity: .5;
   font-size: .9em;
 }
-/* line 29, ../sass/_article.scss */
+/* line 34, ../sass/_article.scss */
 .node.view-mode-full .links.inline {
   margin-left: -24rem;
   margin-right: -8rem;
 }
-/* line 34, ../sass/_article.scss */
+/* line 39, ../sass/_article.scss */
 .node .submitted {
   display: none;
 }
-/* line 37, ../sass/_article.scss */
+/* line 42, ../sass/_article.scss */
 .node .field {
   margin-bottom: 8rem;
 }
-/* line 39, ../sass/_article.scss */
+/* line 44, ../sass/_article.scss */
 .node .field .field-label {
   display: block;
   opacity: .87;
@@ -669,50 +680,66 @@ div.vertical-tabs ul.vertical-tabs-list li.selected:last-child {
   color: rgba(0, 0, 0, 0.87);
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
 }
+/* line 19, ../sass/_theme.scss */
+.region.region-sidebar-first {
+  position: fixed;
+  left: 0;
+  width: 75rem;
+  top: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 16rem;
+}
 
-/* line 24, ../sass/_theme.scss */
+/* line 37, ../sass/_theme.scss */
 #header {
+  margin-left: 75rem;
   background-color: #ffc107;
   color: rgba(0, 0, 0, 0.87);
   height: 16rem;
 }
-/* line 27, ../sass/_theme.scss */
+/* line 41, ../sass/_theme.scss */
 #header > * {
   display: inline-block;
 }
-/* line 30, ../sass/_theme.scss */
+/* line 44, ../sass/_theme.scss */
 #header #logo {
   padding: 1rem 4rem;
 }
-/* line 31, ../sass/_theme.scss */
+/* line 45, ../sass/_theme.scss */
 #header #logo img {
   height: 14rem;
 }
 
-/* line 42, ../sass/_theme.scss */
+/* line 55, ../sass/_theme.scss */
+#content {
+  margin-left: 75rem;
+}
+/* line 57, ../sass/_theme.scss */
 #content > .title, #content > .content {
   padding-left: 4rem;
   padding-right: 4rem;
 }
-/* line 47, ../sass/_theme.scss */
+/* line 62, ../sass/_theme.scss */
 #content > .title {
   background-color: #ffc107;
   color: rgba(0, 0, 0, 0.87);
   position: relative;
   padding-top: 1px;
 }
-/* line 52, ../sass/_theme.scss */
+/* line 67, ../sass/_theme.scss */
 #content > .content {
   padding-top: 8rem;
   padding-bottom: 8rem;
 }
 
-/* line 59, ../sass/_theme.scss */
+/* line 74, ../sass/_theme.scss */
 body.page-node.section-node {
   background-color: #ffffff;
   color: #000000;
 }
-/* line 61, ../sass/_theme.scss */
+/* line 76, ../sass/_theme.scss */
 body.page-node.section-node #content > .content {
   padding-left: 24rem;
 }
