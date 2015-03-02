@@ -1,6 +1,13 @@
 .node {
   &.node-teaser {
     @include card;
+    .field-type-image {
+      margin: 0 -4rem;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
   }
   &.view-mode-full {
     .submitted {
