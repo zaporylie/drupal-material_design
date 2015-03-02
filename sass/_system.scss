@@ -84,12 +84,20 @@
   position: fixed;
   bottom: 6rem;
   right: 6rem;
-  li {
-    a {
-      @extend .floating-button;
-    }
-    &:first-child {
-      display: block;
+  display: flex;
+  flex-direction: column-reverse;
+  @at-root {
+    ul#{&} {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      li {
+        @include floating-button;
+        z-index: 1;
+        &:first-child {
+          z-index: 2;
+        }
+      }
     }
   }
 }

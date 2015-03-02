@@ -117,13 +117,64 @@
   position: fixed;
   bottom: 6rem;
   right: 6rem;
+  display: flex;
+  flex-direction: column-reverse;
 }
-/* line 91, ../sass/_system.scss */
-.action-links li:first-child {
+/* line 90, ../sass/_system.scss */
+ul.action-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 94, ../sass/_system.scss */
+ul.action-links li {
+  height: 14rem;
+  width: 14rem;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 1;
+}
+/* line 71, ../sass/_mixins.scss */
+ul.action-links li a {
+  background-color: #212121;
+  color: rgba(255, 255, 255, 0.87);
+  display: inline-block;
+  font-size: .8em;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+  position: absolute;
+  right: 20rem;
+  white-space: nowrap;
+  top: 50%;
+  margin-top: -1.3em;
+}
+/* line 78, ../sass/_mixins.scss */
+ul.action-links li a:before {
+  position: absolute;
+  right: 0;
+  width: 24rem;
+  content: '+';
+}
+/* line 86, ../sass/_mixins.scss */
+ul.action-links li:before {
+  background-color: #3f51b5;
+  color: rgba(255, 255, 255, 0.87);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
   display: block;
+  width: 14rem;
+  height: 14rem;
+  content: '';
+  position: absolute;
+}
+/* line 97, ../sass/_system.scss */
+ul.action-links li:first-child {
+  z-index: 2;
 }
 
-/* line 98, ../sass/_system.scss */
+/* line 106, ../sass/_system.scss */
 .links.inline {
   list-style: none;
   margin: 2rem 0 0 0;
@@ -133,12 +184,12 @@
   padding: 2rem 0 0 0;
   text-align: right;
 }
-/* line 106, ../sass/_system.scss */
+/* line 114, ../sass/_system.scss */
 .links.inline li {
   display: inline;
 }
 
-/* line 115, ../sass/_system.scss */
+/* line 123, ../sass/_system.scss */
 ul.menu {
   padding: 0;
   font-size: .9em;
@@ -402,31 +453,18 @@ input[type=submit]:active {
   color: #fff;
 }
 
-/* line 198, ../sass/_form.scss */
-.floating-button, .action-links li a {
-  background-color: #3f51b5;
-  color: rgba(255, 255, 255, 0.87);
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3), 0px 0px 1px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px rgba(0, 0, 0, 0.15);
-  width: 14rem;
-  height: 14rem;
-  border-radius: 50%;
-  display: block;
-  cursor: pointer;
-  z-index: 1;
-}
-
-/* line 209, ../sass/_form.scss */
+/* line 199, ../sass/_form.scss */
 .form-item {
   margin-bottom: 2em;
 }
-/* line 211, ../sass/_form.scss */
+/* line 201, ../sass/_form.scss */
 .form-item label {
   display: block;
   opacity: .87;
   font-size: .9em;
 }
 
-/* line 249, ../sass/_form.scss */
+/* line 239, ../sass/_form.scss */
 .grippie {
   display: none;
 }

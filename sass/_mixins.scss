@@ -54,3 +54,45 @@
     }
   }
 }
+
+@mixin label {
+  @include material-background('grey', '900');
+  display: inline-block;
+  font-size: .8em;
+  border-radius: 2px;
+  padding: 1rem 2rem;
+}
+
+@mixin floating-button {
+  height: 14rem;
+  width: 14rem;
+  margin-top: 4rem;
+  position: relative;
+  a {
+    @include label;
+    position: absolute;
+    right: 20rem;
+    white-space: nowrap;
+    top: 50%;
+    margin-top: -1.3em;
+    &:before {
+      position: absolute;
+      right: 0;
+      width: 24rem;
+      content: '+';
+    }
+
+  }
+  &:before {
+    @include material-background($accent-color);
+    @include shadow;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%;
+    display: block;
+    width: 14rem;
+    height: 14rem;
+    content: '';
+    position: absolute;
+  }
+}

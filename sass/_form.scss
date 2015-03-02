@@ -195,16 +195,6 @@
 .raised-button {
 
 }
-.floating-button {
-  @include material-background($accent-color);
-  @include shadow;
-  width: 14rem;
-  height: 14rem;
-  border-radius: 50%;
-  display: block;
-  cursor: pointer;
-  z-index: 1;
-}
 
 .form-item {
   margin-bottom: 2em;
