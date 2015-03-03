@@ -26,13 +26,15 @@
     border-right: 1px solid $form-border-default-color;
     position: fixed;
     left: 0;
-    width: 75rem;
     top: 0;
     bottom: 0;
     padding-top: 16rem;
     z-index: 11;
+    overflow-x: hidden;
+    overflow-y: auto;
     .block {
       border-top: 1px solid $form-border-default-color;
+      padding: 0 4rem;
       .block-title {
         padding: 0 4rem;
         font-weight: 400;
@@ -41,18 +43,46 @@
   }
 }
 
-.sidebar {
+body {
+  &.sidebar-first {
+    .region-sidebar-first {
+      width: 60rem;
+      display: none;
+    }
+    #header {
+      margin-left: 0;
+    }
+    #main {
+      margin-left: 0;
+    }
 
+    @media #{$break-tablet} {
+      .region-sidebar-first {
+        width: 60rem;
+        display: block;
+      }
+      #header {
+        margin-left: 60rem;
+      }
+      #main {
+        margin-left: 60rem;
+      }
+    }
+  }
 }
 
 #page {
+}
+
+#skip-link {
+  margin: 0;
 }
 
 #header {
   @include material-background($base-color);
   position: relative;
   z-index: 10;
-  margin-left: 75rem;
+  height: 16rem;
   .container > * {
     display: inline-block;
   }
@@ -73,31 +103,31 @@
   padding-top: 1px;
   padding-bottom: 1px;
   #page-title {
-//    padding-left: 4rem;
-//    padding-right: 4rem;
     padding-top: 4rem;
     padding-bottom: 4rem;
-  }
-}
-
-body {
-  &.sidebar-first {
-    #main {
-      margin-left: 75rem;
+    @media #{$break-tablet} {
+      padding-left: 0;
+      padding-right: 0;
     }
   }
 }
 
 #content {
-  margin-top: 8rem;
+  @media #{$break-mobile} {
+    margin-top: 8rem;
+    & > .content {
+      border: 1px solid $form-border-default-color;
+    }
+  }
   margin-bottom: 8rem;
+  border: 0;
+
   & > .content {
+    @include material-background('white');
     padding-left: 4rem;
     padding-right: 4rem;
     padding-top: 8rem;
     padding-bottom: 8rem;
-    @include material-background('white');
-    border: 1px solid $form-border-default-color;
   }
 }
 

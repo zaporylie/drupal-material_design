@@ -8,6 +8,7 @@
   border-color: $form-border-default-color;
   font-size: inherit;
   background-color: transparent;
+  width: 100%;
   &:focus {
     outline: 0;
     border-color: material-get-color($base-color);
@@ -120,6 +121,7 @@
   line-height: inherit;
   padding: 1rem;
   background-color: transparent;
+  width: 100%;
 }
 
 .fieldset {
@@ -221,6 +223,7 @@ textarea {
 fieldset {
   @extend .fieldset;
 }
+input[type=password],
 input[type=text] {
   @extend .input-field;
 }

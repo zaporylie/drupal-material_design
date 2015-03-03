@@ -1,7 +1,10 @@
 
 @mixin container {
   max-width: 1150px;
-  margin: 0 auto;
+  margin: 0 4rem;
+  @media #{$break-tablet} {
+    margin: 0 auto;
+  }
 }
 
 @mixin element-invisible {
