@@ -37,6 +37,8 @@
     }
   }
   &.secondary {
+    float: none;
+    white-space: nowrap;
     text-transform: uppercase;
     list-style: none;
     display: none;
@@ -59,9 +61,12 @@
   position: relative;
   float: right;
   &:before {
+    font-family: 'Material-Design-Icons';
+    @extend .mdi-navigation-more-vert;
+    font-size: 6rem;
+    padding: 4rem 0;
+    line-height: 1em;
     display: block;
-    content: ':';
-    padding: 1em;
   }
   &:hover {
     .tabs.secondary {

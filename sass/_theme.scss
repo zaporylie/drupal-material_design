@@ -36,8 +36,45 @@
       border-top: 1px solid $form-border-default-color;
       padding: 0 4rem;
       .block-title {
-        padding: 0 4rem;
         font-weight: 400;
+      }
+      ul.menu {
+        margin-left: -4rem;
+        margin-right: -4rem;
+        ul.menu {
+          margin: 0;
+          padding-left: 4rem;
+          a {
+            padding-left: 8rem;
+            margin-left: -4rem;
+          }
+        }
+      }
+      ul.menu {
+        a {
+          padding-left: 8rem;
+          margin-left: -4rem;
+          font-weight: 600;
+        }
+        ul.menu {
+          a {
+            padding-left: 8rem;
+            margin-left: -4rem;
+            font-weight: 400;
+          }
+          ul.menu {
+            a {
+              padding-left: 12rem;
+              margin-left: -8rem;
+            }
+            ul.menu {
+              a {
+                padding-left: 16rem;
+                margin-left: -12rem;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -85,6 +122,9 @@ body {
   height: 16rem;
   .container > * {
     display: inline-block;
+  }
+  .menu-expander {
+    @extend .mdi-navigation-menu;
   }
   #logo {
     img {
