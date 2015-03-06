@@ -9,6 +9,7 @@
 /* Import Sass mixins, variables, Compass modules, etc. */
 //@import "init";
 @import "settings";
+@import "fonts";
 @import "mixins";
 @import "colors";
 @import "system";
@@ -27,8 +28,6 @@
 //@import "components/misc";
 // Optionally, add your own components here.
 //@import "print";
-
-@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400&subset=latin,latin-ext);
 
 /* SMACSS theme rules */
 @import "theme";
