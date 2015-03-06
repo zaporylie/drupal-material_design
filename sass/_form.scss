@@ -170,8 +170,13 @@
 }
 
 .form-actions {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   text-align: right;
+  border-top: 1px solid $form-border-default-color;
+  margin-left: -4rem;
+  margin-right: -4rem;
+}
+form > .form-actions {
 }
 .button {
   text-transform: uppercase;

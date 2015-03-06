@@ -435,11 +435,14 @@ input[type=text] ~ label {
 
 /* line 172, ../sass/_form.scss */
 .form-actions {
-  padding: 1.5rem;
+  padding: 1.5rem 0;
   text-align: right;
+  border-top: 1px solid #ddd;
+  margin-left: -4rem;
+  margin-right: -4rem;
 }
 
-/* line 176, ../sass/_form.scss */
+/* line 181, ../sass/_form.scss */
 .button, .operations li a, button, .links.inline li a,
 input[type=submit], .actions button,
 .actions input[type=submit] {
@@ -454,37 +457,37 @@ input[type=submit], .actions button,
   color: #795548;
   display: inline-block;
 }
-/* line 187, ../sass/_form.scss */
+/* line 192, ../sass/_form.scss */
 .button:hover, .operations li a:hover, button:hover, .links.inline li a:hover,
 input[type=submit]:hover {
   background-color: #f4ff81;
   color: rgba(0, 0, 0, 0.87);
 }
-/* line 190, ../sass/_form.scss */
+/* line 195, ../sass/_form.scss */
 .button:focus, .operations li a:focus, button:focus, .links.inline li a:focus,
 input[type=submit]:focus {
   background-color: #eeff41;
   color: rgba(0, 0, 0, 0.87);
 }
-/* line 193, ../sass/_form.scss */
+/* line 198, ../sass/_form.scss */
 .button:active, .operations li a:active, button:active, .links.inline li a:active,
 input[type=submit]:active {
   background-color: #c6ff00;
   color: rgba(0, 0, 0, 0.87);
 }
 
-/* line 201, ../sass/_form.scss */
+/* line 206, ../sass/_form.scss */
 .form-item {
   margin-bottom: 2em;
 }
-/* line 203, ../sass/_form.scss */
+/* line 208, ../sass/_form.scss */
 .form-item label {
   display: block;
   opacity: .87;
   font-size: .9em;
 }
 
-/* line 242, ../sass/_form.scss */
+/* line 247, ../sass/_form.scss */
 .grippie {
   display: none;
 }
