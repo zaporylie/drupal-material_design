@@ -8,10 +8,20 @@
  */
 ?>
 
+<?php
+// Render the sidebars to see if there's anything in them.
+$sidebar_first = render($page['sidebar_first']);
+$sidebar_second = render($page['sidebar_second']);
+?>
+
 <div id="page">
 
   <header class="header" id="header" role="banner">
     <div class="container">
+
+      <?php if ($sidebar_first): ?>
+        <div class="menu-expander"></div>
+      <?php endif; ?>
 
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
@@ -105,11 +115,6 @@
 
     </div>
 
-    <?php
-      // Render the sidebars to see if there's anything in them.
-      $sidebar_second = render($page['sidebar_second']);
-    ?>
-
     <?php if ($sidebar_second): ?>
       <aside class="sidebars">
         <?php print $sidebar_second; ?>
@@ -117,7 +122,10 @@
     <?php endif; ?>
 
   </div>
-  <?php print render($page['sidebar_first']); ?>
+
+  <?php if ($sidebar_first): ?>
+  <?php print $sidebar_first; ?>
+  <?php endif; ?>
 
   <?php print render($page['footer']); ?>
 
