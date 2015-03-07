@@ -19,9 +19,7 @@ $sidebar_second = render($page['sidebar_second']);
   <header class="header" id="header" role="banner">
     <div class="container">
 
-      <?php if ($sidebar_first): ?>
-        <div class="menu-expander"></div>
-      <?php endif; ?>
+      <div class="navigation-icon"></div>
 
       <?php if ($logo): ?>
         <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>

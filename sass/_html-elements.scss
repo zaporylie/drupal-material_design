@@ -99,6 +99,14 @@ dd {
   opacity: .8;
 }
 
+* > p:first-child {
+  margin-top: 0;
+}
+
+* > p:last-child {
+  margin-bottom: 0;
+}
+
 .description {
   font-size: .8em;
   padding: 1em 0;

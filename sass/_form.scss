@@ -133,21 +133,18 @@
   &.collapsed {
     height: auto !important;
     position: relative;
-    legend:before {
-      width: 3rem;
-      height: 3rem;
-      position: absolute;
-      left: 2rem;
-      border-color: $form-border-default-color;
-      border-radius: 1rem;
-      border-width: 0 2px 2px 0;
-      border-style: solid;
-      display: block;
-      content: ' ';
-      transform: rotate(45deg);
+    legend {
+      position: relative;
+      &:before {
+        @extend .mdi-font;
+        @extend .mdi-navigation-expand-more;
+        display: block;
+        position: absolute;
+        left: -6rem;
+        width: 4rem;
+      }
     }
   }
-//  position: relative;
   legend {
     float: left;
     opacity: .89;
@@ -176,7 +173,10 @@
   margin-left: -4rem;
   margin-right: -4rem;
 }
-form > .form-actions {
+table .form-actions {
+  border-bottom: 0;
+  margin-left: 0rem;
+  margin-right: 0rem;
 }
 .button {
   text-transform: uppercase;
@@ -228,6 +228,7 @@ textarea {
 fieldset {
   @extend .fieldset;
 }
+select,
 input[type=password],
 input[type=text] {
   @extend .input-field;

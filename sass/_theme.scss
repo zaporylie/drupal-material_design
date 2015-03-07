@@ -14,7 +14,19 @@
     border-width: 1px 1px 0 1px;
     border-style: solid;
     border-color: $form-border-default-color;
-    padding: 4rem 8rem;
+    padding: 4rem 8rem 4rem 24rem;
+    position: relative;
+    &:before {
+      position: absolute;
+      left: 8rem;
+      top: 4rem;
+      display: block;
+      line-height: 8rem;
+      color: material-get-color('blue');
+      font-size: 8rem;
+      @extend .mdi-font;
+      @extend .mdi-action-help;
+    }
   }
   &.region-highlighted {
     img {
@@ -122,18 +134,29 @@ body {
   height: 16rem;
   .container > * {
     display: inline-block;
+    vertical-align: middle;
+    line-height: 14rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
-  .menu-expander {
-    @extend .mdi-navigation-menu;
+  .navigation-icon {
+    cursor: pointer;
+    &:before {
+      @extend .mdi-navigation-menu;
+      @extend .mdi-font;
+      font-size: 10rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
   #logo {
     img {
-      height: 14rem;
+      height: 12rem;
     }
-    padding: 1rem 4rem;
   }
   #site-name {
-
+    margin: 0;
+    font-size: 8rem;
   }
 }
 

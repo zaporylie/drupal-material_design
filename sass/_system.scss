@@ -61,7 +61,7 @@
   position: relative;
   float: right;
   &:before {
-    font-family: 'Material-Design-Icons';
+    @extend .mdi-font;
     @extend .mdi-navigation-more-vert;
     font-size: 6rem;
     padding: 4rem 0;
@@ -76,15 +76,35 @@
 }
 
 .messages {
-  padding: 4rem 8rem;
+  padding: 4rem 8rem 4rem 24rem;
+  position: relative;
+  &:before {
+    position: absolute;
+    left: 8rem;
+    top: 4rem;
+    display: block;
+    line-height: 8rem;
+    color: material-get-color('white');
+    font-size: 8rem;
+    @extend .mdi-font;
+  }
   &.warning {
-    @include material-background('yellow', '100');
+    @include material-background('yellow', '700');
+    &:before {
+      @extend .mdi-alert-warning;
+    }
   }
   &.error {
     @include material-background('red', '500');
+    &:before {
+      @extend .mdi-alert-error;
+    }
   }
   &.status {
     @include material-background('light-green', '500');
+    &:before {
+      @extend .mdi-action-info-outline;
+    }
   }
 }
 
