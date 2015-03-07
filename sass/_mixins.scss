@@ -68,6 +68,24 @@
   }
 }
 
+@mixin contextual-menu {
+  @include menu;
+  @include shadow;
+  @include material-background('white');
+
+  float: none;
+  white-space: nowrap;
+  text-transform: uppercase;
+  list-style: none;
+  display: none;
+  position: absolute;
+  border-radius: 0;
+  margin: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
 @mixin label {
   @include material-background('grey', '900');
   display: inline-block;

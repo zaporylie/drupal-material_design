@@ -27,6 +27,21 @@ function material_design_preprocess_maintenance_page(&$variables, $hook) {
 // */
 
 /**
+ * Override or insert variables into templates.
+ *
+ * @param $variables
+ *   An array of variables to pass to the theme template.
+ * @param $hook
+ *   The name of the template being rendered.
+ */
+function material_design_preprocess(&$variables, $hook) {
+  if (isset($variables['title_suffix']['contextual_links'])) {
+    $variables['title_prefix']['contextual_links'] = $variables['title_suffix']['contextual_links'];
+    unset($variables['title_suffix']['contextual_links']);
+  }
+}
+
+/**
  * Override or insert variables into the html templates.
  *
  * @param $variables
